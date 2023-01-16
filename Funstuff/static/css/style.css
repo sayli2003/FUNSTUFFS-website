@@ -1,12 +1,6 @@
 html{
 	scroll-behavior: smooth;
 }
-body{
-	background-image: url("Lovely Fluid In Soft Pink Background.jpeg");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-  background-size: cover;
-}
 .header{
   display: flex;
 }
@@ -52,12 +46,8 @@ body{
   margin-top: 3%;
   justify-content: space-around;
 }
-.album-card{
+.Album-anchor{
 	width: 18rem;
-	border-radius: 3%;
-	background-image: url('my.jpeg');
-	background-size: cover;
-	height:15rem;
 }
 .album-card-body{
 	display: flex;

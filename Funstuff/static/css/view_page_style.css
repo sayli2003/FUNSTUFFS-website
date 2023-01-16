@@ -23,6 +23,9 @@ html{
     justify-content: space-between;
     margin:3%
 }
+.art_image{
+	height: 100px;
+}
 .art_description{
   height:fit-content;
   margin: 3%;

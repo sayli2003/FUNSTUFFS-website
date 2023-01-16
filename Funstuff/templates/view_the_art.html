@@ -26,7 +26,7 @@
         style="background-color: #689acc"
       >
         <a
-          href="#"
+          href="/"
           class="logo"
           class="nav-link"
           style="background-color: #689acc; color: white"
@@ -52,37 +52,34 @@
         >
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active" style="background-color: #689acc">
-              <a href="new_index.html" class="nav-link" style="color: white">
+              <a href="/" class="nav-link" style="color: white">
                 Home</a
               >
             </li>
             <li class="nav-item active" style="background-color: #689acc">
-              <a href="front.html" class="nav-link" style="color: white">
+              <a href="/blog" class="nav-link" style="color: white">
                 Blog</a
               >
             </li>
             <li class="nav-item active" style="background-color: #689acc">
-              <a href="#" class="nav-link" style="color: white"> Contact Me</a>
+              <a href="/contact" class="nav-link" style="color: white"> Contact Me</a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
     <div class="contentcontainer">
-      <div class="art_image">
-        <img src="my.jpeg" alt="my.jpeg" />
+      <div class="art_image" style="height:80vh;">
+        <img src="{{data.img}}" style="height: 80vh;" alt="my.jpeg" />
       </div>
       <div class="art_description">
         <a href="" class="title">
-          The &nbsp Title &nbsp of &nbsp the &nbsp art &nbsp work
+         {{data.name}}
         </a>
         <hr />
         <div class="small-text">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex totam
-            nulla quidem repudiandae voluptate tempora inventore repellendus
-            expedita dolorum fugit eligendi ducimus nemo debitis autem beatae,
-            rerum similique necessitatibus exercitationem.
+            {{data.desp}}
           </p>
         </div>
       </div>
@@ -115,16 +112,13 @@
       <div class="previous-comments">
         <h2>Comments</h2>
         <div class="all_comments">
-          <hr />
-        <a href="">UserName:</a>
-        <p>
-          the actual comments: Lorem, ipsum dolor sit amet consectetur
-          adipisicing elit. Adipisci sed voluptatum nobis dolor nulla, ipsa
-          optio similique repellat maiores porro ut, voluptatibus ab vero
-          assumenda dicta. Delectus, eum, voluptates dolore dolores, odio
-          dolorem officia molestiae incidunt eveniet esse aliquam eius sint
-          suscipit voluptatum velit beatae voluptatibus et provident nisi nemo.
-        </p>
+            {% for i in comments %}
+            <hr />
+              <a href="">{{i.name}}</a>
+              <p>
+                {{i.content}}
+              </p>
+            {% endfor %}
         </div>
       </div>
 

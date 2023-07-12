@@ -1,7 +1,8 @@
-"""Funstuff URL Configuration
+"""
+URL configuration for Funstuff project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.1/topics/http/urls/
+    https://docs.djangoproject.com/en/4.2/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -15,11 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from home import urls
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home', include('home.urls')),
-    path('work/',include('home.urls')),
-    path("", include('home.urls')),
-    path('view/', include('home.urls')),
-]
+    path('host/', include('host.urls')),
+    path('', include('main.urls')),
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
